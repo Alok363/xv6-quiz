@@ -117,3 +117,85 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 
 ## Answers
 Please write your answers here
+
+
+## Multiple-Choice Questions
+
+Q1. ans- b. A Unix-like operating system
+
+Q2. ans- c. BSD
+
+Q3. ans- d. simple
+
+Q4. ans- b. As interrupts
+
+Q5. ans- a. 128
+
+Q6. ans- c. Sh
+
+Q7. ans- a. Round-robin scheduling
+
+Q8. ans- a. Paging
+
+Q9. ans- b. Using hardware interrupts
+
+Q10. ans- b. No
+
+Q11. ans- c. MIT
+
+## Theoretical Questions
+
+Q12. ans-
+      In the XV6 operating system, a process can be in one of several states:
+      
+      - Running: The process is currently executing instructions on the CPU.
+      - Runnable: The process is ready to run but waiting for the CPU. It is in the queue of processes that are ready to execute.
+      - Sleeping: The process is waiting for an event to complete. This could be I/O completion or the expiration of a timer.
+      - Zombie: The process has terminated, but its parent has not yet received its exit status. It's waiting for the parent to acknowledge its termination.
+
+Q.13. ans-
+      The file system structure in XV6 includes:
+      
+      - Inodes: Data structures representing files and directories, storing metadata such as permissions, owner, size, and pointers to data blocks.
+      - Data blocks: Storage for file contents, which can be actual data or pointers to additional data blocks.
+      - Superblock: Contains key information about the file system, such as the total size, the size of each block, and the location of the root directory.
+      - Directory structure: Organizes files and subdirectories, mapping names to corresponding inodes.
+
+Q.14. ans-
+      - System calls: Requests for services from the kernel. They provide a bridge between user-level programs and the operating system. Examples in XV6 include `fork()` and `exec()`.
+      - Library functions: Higher-level functions built on top of system calls. They are part of C libraries and provide more abstract functionality. Examples in XV6 include `printf()` and       `malloc()`.
+
+Q.15. ans-
+      Memory paging in XV6 involves dividing physical memory into fixed-size pages. Key points:
+      
+      - Page Table: Maintains a mapping between virtual addresses used by a program and physical addresses in RAM.
+      - Benefits: Enables efficient use of memory by allowing non-contiguous allocation, simplifies address translation, and facilitates memory protection.
+
+Q.16. ans-
+      Three essential shell commands in XV6:
+      
+      - `ls`: Lists directory contents.
+      - `cd`: Changes the current working directory.
+      - `cp`: Copies files or directories.
+
+Q.17. ans-
+      Process synchronization in XV6 is essential to avoid conflicts between processes accessing shared resources. Mechanisms include semaphores, locks, and barriers. Synchronization ensures orderly execution and prevents race conditions.
+
+Q.18. ans-
+      - Role: Interrupts are events that alter the normal flow of program execution. They can be caused by hardware devices or software.
+      - Handling: In XV6, hardware interrupts are handled by interrupt service routines (ISRs). They ensure the timely and proper response to external events.
+      - Significance: Interrupts are crucial for handling real-time events, improving system responsiveness, and facilitating communication between hardware and software.
+
+Q.19. ans-
+      - Definition: Virtual memory allows processes to use more memory than physically available. It is implemented through techniques like paging.
+      - Implementation in XV6: XV6 uses paging to provide isolation between processes, simplifying memory management.
+      - Advantages: Enables efficient utilization of memory, supports memory protection, and facilitates the use of demand paging.
+
+Q.20. ans-
+      Steps in the boot process of XV6:
+      
+      1. Power-on self-test (POST): Hardware components are tested.
+      2. Bootloader: Loads the XV6 kernel into memory.
+      3. Kernel Initialization: Basic initialization of essential components.
+      4. Transfer of Control: The bootloader transfers control to the XV6 kernel.
+      5. Kernel Execution: The kernel starts executing, initializing the system and preparing for user processes.
